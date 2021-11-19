@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/424029d236.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
+    <title>BookList</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center"><i class="fas fa-book-open text-primary"></i>My<span
+            class="text-primary">Book</span>List</h1>
+                <form id="book-form" > 
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                </div>
+                <div class="form-group">
+                   <label for="author">Author</label>
+                   <input type="text" id="author" name="author" class="form-control">
+               </div>
+               <div class="form-group">
+                   <label for="isbn">ISBN#</label>
+                   <input type="text" id="id" name="id" class="form-control">
+               </div>
+               <input type="submit" value="Add Book" class="btn btn-primary btn-block mt-4">
+            </form>
+           
+             <table>
+                <tr>
+                    <td><button onclick="myFunction()"  class="btn btn-primary btn-block mt-4" style="margin-right: 30px;">Show Book</button></td>
+                    <td><div class="main-search-input-wrap mt-4">
+                        <div class="main-search-input fl-wrap">
+                            <div class="main-search-input-item" style="margin-right: 5px;"> <input type="text" value="" placeholder="Type To Search" id="searching" name="searching"> </div>
+                        </div>
+                    </div></td>
+                    <td> <button onclick="multiSearch()" class="main-search-button btn btn-primary btn-block mt-4" style="margin-right: 30px;padding-top:10px;">Search</button></td>
+                    <td><button onclick="updateBook()"  class="btn btn-primary btn-block mt-4">Update BookList</button></td>
+                    <td><button onclick="deleteAll()"  class="btn btn-primary btn-block mt-4" style="margin-left: 30px;">Delete All</button></td>
+                </tr>
+            </table> 
+            
+            <table class="table table-striped mt-5" id="table1">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ID</th>
+                        <th>Mark To Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list"> </tbody>
+            </table>
+            </div>
+            <script src="app.js"></script>
+</body>
+</html>
